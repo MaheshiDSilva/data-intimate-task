@@ -1,16 +1,14 @@
-
 import Image from 'next/image'
-// import img from '../../public/dog.jpg'
 import Head from "next/head";
-import { FaGoogle } from "react-icons/fa";
+import {FaGoogle, FaFacebookF} from "react-icons/fa";
 
 
 export default function Home() {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-[#4e73df]">
+        <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-[#4e73df] ">
 
             <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-                <div className="bg-white rounded-[5px] shadow-2xl flex w-[75%] h-[35rem]">
+                <div className=" img bg-white rounded-[5px] shadow-2xl flex w-[75%] h-[35rem]">
                     <div className="w-2/5 p-5 bg-yellow-500 rounded-tl-[5px] rounded-bl-[5px] ">
                         <Image
                             src={'https://source.unsplash.com/Mv9hjnEUHR4/600x800'}
@@ -26,38 +24,44 @@ export default function Home() {
                         <h1 className="font-sans text-2xl text-[#3a3b45]">Create an Account!</h1>
 
                         <form action="">
-                        <div className="flex items-center justify-between flex-wrap mt-5 font-sans font-light text-sm max-w-[100%]">
-                            <input type="text" placeholder="First Name" className="border-[1.5px] rounded-3xl border-gray-300 p-3 pr-2 w-[50%] "/>
-                            <input type="text" placeholder="Last Name" className="border-[1.5px] rounded-3xl border-gray-300 p-3 w-[50%] "/>
+                        <div className="flex justify-center flex-wrap mt-5 font-sans font-light text-sm ">
+                            <input type="text" placeholder="First Name"
+                                   className="flex justify-between border-[1.5px] rounded-3xl border-gray-300 p-3 w-1/2  "/>
+                            <input type="text" placeholder="Last Name"
+                                   className="flex justify-between border-[1.5px] rounded-3xl border-gray-300 p-3 w-1/2 "/>
                         </div>
-                        <div className="flex items-center mt-4 mb-4 font-sans font-light text-sm">
+                        <div className="flex justify-center flex-wrap mt-4 mb-4 font-sans font-light text-sm ">
                             <input type="email" placeholder="Email Address"
-                                   className="border-[1.5px] rounded-3xl border-gray-300 p-3 w-[100%] pr-5"/>
+                                   className="border-[1.5px] rounded-3xl border-gray-300 p-3 flex flex-col pr-5 w-full"/>
                         </div>
-                        <div className="flex items-center justify-between flex-wrap mb-4 font-sans font-light text-sm max-w-[100%]">
-                            <input type="text" placeholder="Password" className="border-[1.5px] rounded-3xl border-gray-300 p-3 pr-2 w-[50%] "/>
-                            <input type="text" placeholder="Repeat Password" className="border-[1.5px] rounded-3xl border-gray-300 p-3 w-[50%]"/>
+                        <div className="flex flex-content flex-wrap mb-4 font-sans font-light text-sm w-full">
+                            <input type="text" placeholder="Password"
+                                   className="flex justify-between border-[1.5px] rounded-3xl border-gray-300 p-3 w-1/2"/>
+                            <input type="text" placeholder="Repeat Password"
+                                   className="flex justify-between border-[1.5px] rounded-3xl border-gray-300 p-3 w-1/2"/>
                         </div>
 
                         </form>
                         <div className="flex items-center mt-3 text-sm">
                             <button
-                                className=" rounded-3xl border-2 border-[#4e73df] p-2 w-[100%] pr-5 bg-[#4e73df] text-white font-sans text-center">Register
+                                className=" rounded-3xl border-2 border-[#4e73df] p-2 w-full pr-5 bg-[#4e73df] text-white font-sans text-center">Register
                                 Account
                             </button>
                         </div>
                         <div>
-                            <hr className="bg-gray-300 h-[1.1px] w-[100%] mt-4 mb-4"/>
+                            <hr className="bg-gray-300 h-[1.1px] w-full mt-4 mb-4"/>
                         </div>
-                        <div className="flex items-center mt-3 text-sm ">
+                        <div className="flex items-center mt-3 text-sm">
                             <button
-                                className="border-2 rounded-3xl border-[#ea4335] p-2 w-[100%] pr-5 bg-[#ea4335] text-white font-sans">Register
+                                className=" flex items-center justify-center border-2 rounded-3xl border-[#ea4335] p-2 w-full pr-5 bg-[#ea4335] text-white font-sans ">
+                                <FaGoogle className="logo"/>Register
                                 with Google
                             </button>
                         </div>
                         <div className="flex items-center mt-2 text-sm">
                             <button
-                                className="border-2 rounded-3xl border-[#3b5998] p-2 w-[100%] pr-5 bg-[#3b5998] text-white font-sans">Register
+                                className=" flex items-center justify-center border-2 rounded-3xl border-[#3b5998] p-2 w-full pr-5 bg-[#3b5998] text-white font-sans">
+                                <FaFacebookF className="logo"/>Register
                                 with Facebook
                             </button>
                         </div>
